@@ -234,7 +234,7 @@ class _InfoProjectPageState extends State<InfoProjectPage> {
                 onTap: () {
                   Get.back();
                 },
-                child: Icon(Icons.arrow_back_ios)),
+                child: Icon(Icons.arrow_back_ios_new)),
          
           ),
         ],
