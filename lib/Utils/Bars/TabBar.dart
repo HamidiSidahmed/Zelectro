@@ -23,13 +23,10 @@ class _CustomTabBarProjectState extends State<CustomTabBarProject> {
               unselectedLabelColor: Colors.black,
               labelStyle: TextStyle(fontWeight: FontWeight.w500),
               automaticIndicatorColorAdjustment: true,
-              onTap: (value) {
-                print(value);
-              },
               dividerColor: Colors.transparent,
               indicatorSize: TabBarIndicatorSize.label,
               indicatorColor: Color(0XFF2A6EF8),
-              padding: EdgeInsets.only(top: 5, bottom: 5),
+              padding: EdgeInsets.only(top: 5, bottom: 5,right: 55),
               tabs: [
                 Tab(
                   text: "Mobile",

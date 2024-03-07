@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:zelectro/Utils/Bars/BottomBar.dart';
 import 'package:zelectro/Utils/Bars/TabBar.dart';
-import 'package:zelectro/Utils/Stars.dart';
+import 'package:zelectro/Utils/Constant/Stars.dart';
 import 'package:zelectro/controller/Controller.dart';
 import 'package:zelectro/view/cart.dart';
 import 'package:zelectro/view/projects/projects.dart';

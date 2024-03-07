@@ -89,142 +89,140 @@ class _InfoProjectPageState extends State<InfoProjectPage> {
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(35)),
               margin: EdgeInsets.only(top: 285),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 20, left: 30),
-                          child: Text(
-                            "Robotic Car",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                        Container(
-                          width: 250,
-                          height: 57,
-                          child: Stack(
-                            children: [
-                              Container(
-                                margin:
-                                    EdgeInsets.only(top: 20, left: 110),
-                                width: 100,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                    color: Colors.grey[300],
-                                    borderRadius: BorderRadius.circular(25)),
-                                child: Center(
-                                  child: Container(
-                                    child: Text("$number_of_order",
-                                        style: TextStyle(fontSize: 16)),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                top: 14,
-                                left: 100,
-                                child: InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      number_of_order -= 1;
-                                      if(number_of_order<=0) number_of_order=0;
-                                    });
-                                    print(number_of_order);
-                                  },
-                                  child: Container(
-                                    width: 60,
-                                    height: 50,
-                                    child: Center(
-                                      child: Text(
-                                        "-",
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                top: 14,
-                                left: 160,
-                                child: InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      number_of_order += 1;
-                                    });
-                                  },
-                                  child: Container(
-                                    width: 60,
-                                    height: 50,
-                                    child: Center(
-                                      child: Text(
-                                        "+",
-                                        style: TextStyle(fontSize: 17),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 30, top: 25),
-                      child: Text("Components",
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 20, left: 30),
+                        child: Text(
+                          "Robotic Car",
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 10),
-                      height: 55,
-                      child: ListView.builder(
-                        padding: EdgeInsets.only(right: 20),
-                        itemCount: 10,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                                color: Colors.grey.withOpacity(0.3),
-                                border: Border.all(color: Colors.transparent),
-                                borderRadius: BorderRadius.circular(25)),
-                            margin: EdgeInsets.only(top: 20, left: 20),
-                            child: Center(
-                              child: Text(
-                                "Esp32 Arduino",
-                                style: TextStyle(
-                                  fontSize: 13,
+                              fontSize: 20, fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      Container(
+                        width: 250,
+                        height: 57,
+                        child: Stack(
+                          children: [
+                            Container(
+                              margin:
+                                  EdgeInsets.only(top: 20, left: 110),
+                              width: 100,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: BorderRadius.circular(25)),
+                              child: Center(
+                                child: Container(
+                                  child: Text("$number_of_order",
+                                      style: TextStyle(fontSize: 16)),
                                 ),
                               ),
                             ),
-                          );
-                        },
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 25, left: 30),
-                      child: Text(
-                        "Description",
-                        style:
-                            TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 10, left: 30),
-                      child: Text(
-                        "this project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbbvsd, vsd,bvbsbvskjvsbjbkjfvbjksbjvsjkvhsfbvhksfbkhvsfhkbvbhksfbkhvskbhcx ,nv sfb0 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxb arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxb",
+                            Positioned(
+                              top: 14,
+                              left: 100,
+                              child: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    number_of_order -= 1;
+                                    if(number_of_order<=0) number_of_order=0;
+                                  });
+                                  print(number_of_order);
+                                },
+                                child: Container(
+                                  width: 60,
+                                  height: 50,
+                                  child: Center(
+                                    child: Text(
+                                      "-",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 14,
+                              left: 160,
+                              child: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    number_of_order += 1;
+                                  });
+                                },
+                                child: Container(
+                                  width: 60,
+                                  height: 50,
+                                  child: Center(
+                                    child: Text(
+                                      "+",
+                                      style: TextStyle(fontSize: 17),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 30, top: 25),
+                    child: Text("Components",
                         style: TextStyle(
-                            color: Colors.grey[700],
-                            fontWeight: FontWeight.normal),
-                      ),
+                            fontSize: 16, fontWeight: FontWeight.w500)),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    height: 55,
+                    child: ListView.builder(
+                      padding: EdgeInsets.only(right: 20),
+                      itemCount: 10,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.3),
+                              border: Border.all(color: Colors.transparent),
+                              borderRadius: BorderRadius.circular(25)),
+                          margin: EdgeInsets.only(top: 20, left: 20),
+                          child: Center(
+                            child: Text(
+                              "Esp32 Arduino",
+                              style: TextStyle(
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
-                  ],
-                ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 25, left: 30),
+                    child: Text(
+                      "Description",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, left: 30),
+                    child: Text(
+                      "this project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbhis project is based on esp32 andthis project is based on esp32 and arduino and mpu605vsdvdvdsvsnkjkbvsqblvcbjkvqsqbhvksjhdvcdsfdsfdsljnfsdkjbbvsd, vsd,bvbsbvskjvsbjbkjfvbjksbjvsjkvhsfbvhksfbkhvsfhkbvbhksfbkhvskbhcx ,nv sfb0 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxb arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxbthis project is based on esp32 and arduino and mpu6050 it can be xvbvxbvbvxvcbvxcbvxcbvxcbvcxbvcxb",
+                      style: TextStyle(
+                          color: Colors.grey[700],
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
