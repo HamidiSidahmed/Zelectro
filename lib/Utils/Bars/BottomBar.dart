@@ -14,68 +14,106 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   Widget build(BuildContext context) {
     return Obx(
       () {
-        return Container(
-          height: 110,
-          child: Column(
-            children: [
-              Container(
-                color: Colors.grey.shade200.withOpacity(0.1),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(left: 25,right: 10),
-                      child: CheckBox(check_Box: false)),
-                    Text("All")
-                  ],
-                ),
-                height: 50,
-              ),
-              NavigationBar(
-                  indicatorColor: Color(0XFF2A6EF8).withOpacity(0.2),
-                  backgroundColor: Colors.grey.shade200.withOpacity(0.1),
-                  
-                  labelBehavior:
-                      NavigationDestinationLabelBehavior.onlyShowSelected,
-                  selectedIndex: appController.currentindex.value,
-                  onDestinationSelected: (value) {
-                    appController.currentindex.value = value;
-                    print(appController.currentindex);
-                    appController.intialize_value.value = 0;
-                  },
-                  height: 60,
-                  destinations: [
-                    NavigationDestination(
-                        icon: Container(
-                          width: 28,
-                          height: 28,
-                          child: Image.asset(
-                            "icons/projects.png",
-                          ),
+        return AnimatedContainer(
+          duration: Duration(milliseconds: 100),
+          color: Colors.white,
+          height: appController.currentindex.value==2?115:60,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                
+                    
+                    AnimatedContainer(
+                        duration: Duration(milliseconds: 100),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.08),
                         ),
-                        label: "projects"),
-                    NavigationDestination(
-                        icon: Container(
-                          width: 28,
-                          height: 28,
-                          child: Image.asset(
-                            "icons/shop.png",
-                          ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                                margin: EdgeInsets.only(left: 25, right: 10),
+                                child: CheckBox(check_Box: false)),
+                            Text(
+                              "All",
+                              style: TextStyle(fontSize: 15),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 50),
+                              width: 125,
+                              child: Center(
+                                  child: Text(
+                                "25000 DA",
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.w500),
+                              )),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: Color(0XFF2A6EF8),
+                                  borderRadius: BorderRadius.circular(25)),
+                              width: 125,
+                              height: 45,
+                              child: Center(
+                                child: Text(
+                                  "Checkout (10)",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            )
+                          ],
                         ),
-                        label: "store"),
-                    NavigationDestination(
-                        icon: Container(
-                          width: 28,
-                          height: 28,
-                          child: Icon(
-                            Icons.shopping_cart_outlined,
-                            color: Colors.black,
-                            size: 26,
+                        height:appController.currentindex.value == 2? 55:0,
+                      ),
+                NavigationBar(
+                    elevation: 0.8,
+                    indicatorColor: Color(0XFF2A6EF8).withOpacity(0.2),
+                    backgroundColor: Colors.white,
+                    labelBehavior:
+                        NavigationDestinationLabelBehavior.onlyShowSelected,
+                    selectedIndex: appController.currentindex.value,
+                    onDestinationSelected: (value) {
+                      appController.currentindex.value = value;
+                      print(appController.currentindex);
+                      appController.intialize_value.value = 0;
+                    },
+                    height: 60,
+                    destinations: [
+                      NavigationDestination(
+                          icon: Container(
+                            width: 28,
+                            height: 28,
+                            child: Image.asset(
+                              "icons/projects.png",
+                            ),
                           ),
-                        ),
-                        label: "cart")
-                  ]),
-            ],
+                          label: "projects"),
+                      NavigationDestination(
+                          icon: Container(
+                            width: 28,
+                            height: 28,
+                            child: Image.asset(
+                              "icons/shop.png",
+                            ),
+                          ),
+                          label: "store"),
+                      NavigationDestination(
+                          icon: Container(
+                            width: 28,
+                            height: 28,
+                            child: Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.black,
+                              size: 26,
+                            ),
+                          ),
+                          label: "cart")
+                    ]),
+              ],
+            ),
           ),
         );
       },

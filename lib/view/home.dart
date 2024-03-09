@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:   CustomBottomBar(),
+    
+    bottomNavigationBar:   CustomBottomBar(),
         body: Stack(children: [
      appController.currentindex.value==2?Container(): Column(
         children: [
