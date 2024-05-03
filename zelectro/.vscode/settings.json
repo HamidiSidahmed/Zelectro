@@ -1,0 +1,6 @@
+{  
+    "debug.console.collapseIdenticalLines": true,
+    "editor.detectIndentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.autoIndent": "full"
+}
